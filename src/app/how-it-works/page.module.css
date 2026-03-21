@@ -1,0 +1,105 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-navy-dark), var(--color-navy-light));
+  padding: 100px 24px 80px;
+  color: var(--color-white);
+}
+
+.heroTitle {
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 900;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 32px;
+  margin-bottom: 0;
+}
+
+.timelineLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timelineIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-200);
+}
+
+.timelineLine {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-green), transparent);
+  margin: 12px auto;
+  min-height: 48px;
+}
+
+.timelineContent {
+  padding-bottom: 56px;
+}
+
+.stepNum {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-green);
+  margin-bottom: 8px;
+}
+
+.stepTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+}
+
+.stepDesc {
+  font-size: 16px;
+  color: var(--color-gray-600);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.stepTime {
+  font-size: 13px;
+  color: var(--color-gray-500);
+  background: var(--color-gray-100);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 640px) {
+  .timelineItem { grid-template-columns: 48px 1fr; gap: 16px; }
+  .timelineIcon { width: 48px; height: 48px; font-size: 20px; }
+  .stepTitle { font-size: 20px; }
+}

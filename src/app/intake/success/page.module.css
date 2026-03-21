@@ -1,0 +1,134 @@
+.page {
+  min-height: 80vh;
+  background: var(--color-gray-50);
+  padding: 80px 24px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 56px;
+  max-width: 760px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-gray-100);
+  width: 100%;
+}
+
+.checkIcon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 900;
+  color: var(--color-navy);
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--color-gray-600);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.nextTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-100);
+}
+
+.stepIcon {
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.stepTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 6px;
+}
+
+.stepDesc {
+  font-size: 14px;
+  color: var(--color-gray-600);
+  line-height: 1.65;
+}
+
+.docNote {
+  background: rgba(16,185,129,0.06);
+  border: 1px solid rgba(16,185,129,0.2);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.docNote h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+}
+
+.docNote p {
+  font-size: 14px;
+  color: var(--color-gray-600);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.docNote ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.docNote li {
+  font-size: 14px;
+  color: var(--color-gray-700);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .card { padding: 28px 20px; }
+  .actions { flex-direction: column; }
+}

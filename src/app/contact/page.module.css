@@ -1,0 +1,68 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-navy-dark), var(--color-navy-light));
+  padding: 100px 24px 80px;
+}
+
+.heroTitle {
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 900;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.formCard {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-gray-100);
+}
+
+.formTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+}
+
+.formSubtitle {
+  font-size: 15px;
+  color: var(--color-gray-500);
+  margin-bottom: 28px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.successMsg {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.successMsg h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+}
+
+.successMsg p {
+  font-size: 16px;
+  color: var(--color-gray-600);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .formCard { padding: 28px 20px; }
+}

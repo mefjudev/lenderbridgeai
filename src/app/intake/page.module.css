@@ -1,0 +1,141 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-navy-dark), var(--color-navy-light));
+  padding: 80px 24px 60px;
+}
+
+.heroTitle {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.heroSubtitle {
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.formWrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 8px;
+}
+
+.formSection {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-100);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.nextAction {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.secureNote {
+  font-size: 13px;
+  color: var(--color-gray-400);
+  text-align: center;
+}
+
+.summaryBox {
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summaryTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+}
+
+.summaryText {
+  font-size: 14px;
+  color: var(--color-gray-600);
+}
+
+.editBtn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-green);
+  cursor: pointer;
+  padding: 0;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.editBtn:hover { text-decoration: underline; }
+
+.paymentBox {
+  background: linear-gradient(135deg, var(--color-navy-dark), var(--color-navy));
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+}
+
+.paymentInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.paymentAmount {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--color-green-light);
+  flex-shrink: 0;
+}
+
+.paymentLabel {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.paymentSub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .formSection { padding: 24px 20px; }
+  .paymentInfo { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .paymentAmount { font-size: 32px; }
+}
