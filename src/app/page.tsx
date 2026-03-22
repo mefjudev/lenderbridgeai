@@ -77,9 +77,9 @@ export default function HomePage() {
             </Link>
           </div>
           <div className={styles.heroTrust}>
-            <span><CheckCircle2 size={16} color="var(--color-green)" inline /> No foreclosure on your record</span>
-            <span><CheckCircle2 size={16} color="var(--color-green)" inline /> Direct lender negotiation</span>
-            <span><CheckCircle2 size={16} color="var(--color-green)" inline /> Results in 60–120 days</span>
+            <span><CheckCircle2 size={16} color="var(--color-green)" /> No foreclosure on your record</span>
+            <span><CheckCircle2 size={16} color="var(--color-green)" /> Direct lender negotiation</span>
+            <span><CheckCircle2 size={16} color="var(--color-green)" /> Results in 60–120 days</span>
           </div>
         </div>
         <div className={styles.heroBg} aria-hidden="true" />
