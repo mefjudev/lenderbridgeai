@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Inter, Outfit, Libre_Baskerville } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -38,6 +39,12 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69cff8cd10e73ab5d8ae87a3"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

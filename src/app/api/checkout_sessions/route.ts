@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
         realtorEmail: body.realtorEmail || 'N/A'
       },
       allow_promotion_codes: true,
-      success_url: `${baseUrl}/intake/success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `https://form.jotform.com/260914872868068?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/intake`,
     });
 
