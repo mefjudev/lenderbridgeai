@@ -13,14 +13,38 @@ import styles from './page.module.css';
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate form submission
-    await new Promise(r => setTimeout(r, 1000));
-    setSubmitted(true);
-    setLoading(false);
+    setError('');
+
+    const form = e.currentTarget;
+    const data = {
+      firstName: (form.querySelector('#first-name') as HTMLInputElement).value,
+      lastName: (form.querySelector('#last-name') as HTMLInputElement).value,
+      email: (form.querySelector('#contact-email') as HTMLInputElement).value,
+      phone: (form.querySelector('#contact-phone') as HTMLInputElement).value,
+      subject: (form.querySelector('#contact-subject') as HTMLSelectElement).value,
+      message: (form.querySelector('#contact-message') as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error('Submission failed');
+
+      setSubmitted(true);
+    } catch {
+      setError('Something went wrong. Please try again or email us directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -81,6 +105,11 @@ export default function ContactPage() {
                 <>
                   <h2 className={styles.formTitle}>Send Us a Message</h2>
                   <p className={styles.formSubtitle}>Have a question? We typically respond within a few hours.</p>
+                  {error && (
+                    <div style={{ padding: '12px', background: '#FEE2E2', color: '#DC2626', borderRadius: '8px', fontSize: '14px', marginBottom: '16px' }}>
+                      {error}
+                    </div>
+                  )}
                   <form onSubmit={handleSubmit} className={styles.form}>
                     <div className="grid-2" style={{gap: '16px'}}>
                       <div className="form-group">
